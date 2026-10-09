@@ -32,7 +32,13 @@ const Header =async () => {
                 </div>
             </div>
             <hr className="border-t border-gray-200 my-2" />
-            
+            <div className='container mx-auto flex gap-3'>
+                {data.map((navItem:NavItemType)=><Link href={navItem.slug} key={navItem.id}>
+                    <span className="text-xl">{navItem.icon}</span>
+                    <span className='text-xl'>{navItem.nameBn}</span>
+                </Link>)}
+            </div>
+            <hr className="border-t border-gray-200 my-2" />
         </div>
     )
 }
