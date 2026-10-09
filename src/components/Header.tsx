@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Header =async () => {
     const res = await fetch('https://api.api-store.workers.dev/api/bazardor/categories');
     const data = await res.json();
-    console.log(data)
+    
     
 
     const date = new Date().toLocaleDateString('bn-BD', {
@@ -17,7 +17,7 @@ const Header =async () => {
 
 
     return (
-        <div className='bg-[#F3FBF4]'>
+        <div className='bg-brandBg'>
             <div className='container mx-auto flex justify-between items-center'>
                 <Link href={'/'} className='flex items-center gap-2'>
                     <Image className='bg-green-500 w-10 h-10 rounded p-2' src={'/logo-icon.png'} alt='logo' height={50} width={50} />

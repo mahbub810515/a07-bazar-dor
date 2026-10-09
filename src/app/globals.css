@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+@root {
+  --color-brandBg: #F3FBF4;
+}
