@@ -18,9 +18,9 @@ const MarqueeText = ({ products }: ProductsProp) => {
                     <span className="mx-1">{product.nameBn}</span>
                     <span className="mx-1">{product.today} টাকা/কেজি</span>
                     <span
-                        className={`mx-1 ${product.change.dir === "up"
+                        className={`mx-1 ${product.change.dir === "down"
                                 ? "text-green-500"
-                                : product.change.dir === "down"
+                                : product.change.dir === "up"
                                     ? "text-red-500"
                                     : "text-gray-500"
                             }`}
