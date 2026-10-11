@@ -1,5 +1,4 @@
 import { ProductType } from '@/types/ProductType'
-import React from 'react'
 import ProductCard from './ProductCard'
 type PriceUpProps = {
   products: ProductType[]

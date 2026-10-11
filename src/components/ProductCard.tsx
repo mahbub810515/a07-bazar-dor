@@ -6,7 +6,7 @@ type ProductProps = {
 }
 
 const ProductCard = ({ product }: ProductProps) => {
-    console.log(product)
+    
     return (
         <div className='border-2 rounded-2xl bg-white p-4'>
             <div className='flex items-center gap-2 pb-3'>

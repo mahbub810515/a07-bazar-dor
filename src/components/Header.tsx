@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 
 const Header =async () => {
-    const res = await fetch('https://api.abcz.workers.dev/api/bazardor/categories');
+    const res = await fetch('https://openapi.programming-hero.com/api/bazardor/categories');
     const data = await res.json();
         
 
@@ -26,8 +26,8 @@ const Header =async () => {
                     </div>
                 </Link>
                 <div className='flex gap-2'>
-                    <Button className={`bg-green-500`}>সাইন ইন</Button>
-                    <Button>সাইন আপ</Button>
+                    <Link href={'/sign-in'}><Button className={`bg-green-500`}>সাইন ইন</Button></Link>
+                    <Link href={'/sign-up'}><Button>সাইন আপ</Button></Link>
                 </div>
             </div>
             <hr className="border-t border-gray-200 my-2" />
