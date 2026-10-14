@@ -1,8 +1,12 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import { Form, Button, TextField, Label, Input, FieldError, Description, Checkbox } from '@heroui/react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const SignInPage = () => {
+    const router = useRouter();
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -27,7 +31,9 @@ const SignInPage = () => {
             return;
         }
 
-        alert("Sign in successfully!");
+        toast.success("Sign in successfully!");
+        router.push('/');
+        
     };
 
 

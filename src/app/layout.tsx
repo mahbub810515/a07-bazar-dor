@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { Suspense } from "react";
 import Footer from "@/components/Footer";
+import ToastProvider from "@/components/ToastProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +31,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Suspense fallback={<p>Loding...</p>}>
           <Header />
           <main className="flex-1">
-          {children}
+            <ToastProvider>
+              {children}
+            </ToastProvider>
           </main>
-          <Footer/>
+          <Footer />
         </Suspense>
       </body>
     </html>
