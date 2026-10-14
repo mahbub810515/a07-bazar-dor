@@ -32,7 +32,8 @@ const Header =async () => {
             </div>
             <hr className="border-t border-gray-200 my-2" />
             <div className='container mx-auto flex gap-3'>
-                {data.map((navItem:NavItemType)=><Link href={navItem.slug} key={navItem.id}>
+                {/* https://openapi.programming-hero.com/api/bazardor/products?category=chal */}
+                {data.map((navItem:NavItemType)=><Link href={`/api/bazardor/categories/${navItem.slug}`} key={navItem.id}>
                     <span className="text-xl">{navItem.icon}</span>
                     <span className='text-xl'>{navItem.nameBn}</span>
                 </Link>)}
